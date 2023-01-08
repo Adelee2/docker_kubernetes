@@ -6,7 +6,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.7-stretch
+      - image: hadolint/hadolint:v1.6.6-6-g254b4ff
     working_directory: ~/repo
     steps:
       - checkout
