@@ -18,9 +18,9 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            yum install -y python3
-            yum install epel-release
-            yum install python-pip
+            apt-get update
+            apt-get install python3.7
+            python3.7 -m pip install pip
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
