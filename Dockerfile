@@ -11,7 +11,7 @@ COPY . /app
 ## Step 3:
 RUN python3 -m venv ~/.devops 
 # Install packages from requirements.txt
-# hadolint ignore=DL3013 hadolint ignore=SC1090
+# hadolint ignore=DL3013, hadolint ignore=SC1090
 RUN . ~/.devops/bin/activate && pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt
 ## Step 4:
 EXPOSE 80
